@@ -1,0 +1,595 @@
+
+* {
+    margin: 100;
+    padding: 500;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #343a40;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 26px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navbar .logo a:hover {
+    color: #007BFF;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin-left: 25px;
+    position: relative;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-links a:focus {
+    background-color: #495057;
+    transform: scale(1.1);
+    outline: none;
+}
+
+.navbar ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #343a40;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    min-width: 160px;
+    z-index: 1000;
+}
+
+.navbar ul ul li {
+    margin: 0;
+}
+
+.navbar ul ul a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.navbar ul ul a:hover {
+    background-color: #495057;
+}
+
+.navbar li:hover > ul {
+    display: block;
+}
+
+.navbar .nav-cart {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.navbar .nav-cart a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-cart .cart-icon {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.navbar .nav-cart .cart-count {
+    background: #ff0000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4px;
+}
+
+/* User Menu */
+.navbar .user-menu {
+    position: relative;
+}
+
+.navbar .user-menu > a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .user-menu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #343a40;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    min-width: 160px;
+    z-index: 1000;
+}
+
+.navbar .user-menu:hover ul {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    background: url("images/image.jpg") no-repeat center center / cover;
+    background-color: #f8f9fa;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-container form {
+    display: flex;
+    justify-content: center;
+}
+
+.search-container input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .navbar .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar .nav-links a {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 30px 10px;
+    }
+
+    .search-container input {
+        max-width: 300px;
+    }
+
+    .search-container button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section Titles */
+section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #444;
+    text-align: center;
+    position: relative;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+section h2:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #007BFF;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+/* Container for service details */
+.service-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Spacing between items */
+    padding: 20px; /* Padding around the container */
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+
+/* Individual service item */
+.service-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 20px); /* Responsive width with gap adjustment */
+    box-sizing: border-box;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    margin-bottom: 20px; /* Space between rows */
+}
+
+/* Hover effect for service items */
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Image styling */
+.service-item img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Paragraph styling */
+.service-item p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Primary button styling */
+.btn-primary {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+
+/* Filter Section */
+.filter-section {
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group label {
+    font-size: 16px;
+    color: #444;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.filter-group select:focus {
+    border-color: #007BFF;
+}
+
+/* Service Packages */
+.service-packages {
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.service-packages .package {
+    margin-bottom: 25px;
+}
+
+.service-packages h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #007BFF;
+}
+
+.service-packages .package:hover h3 {
+    color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Subscription Plans */
+.subscription-plans {
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.subscription-plans .plan {
+    margin-bottom: 25px;
+}
+
+.subscription-plans h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #28A745;
+}
+
+.subscription-plans .plan:hover h3 {
+    color: #218838;
+    transform: scale(1.05);
+}
+
+/* Loyalty Program */
+.loyalty-program {
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.loyalty-program h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.loyalty-program .points-display {
+    font-size: 20px;
+    color: #444;
+    margin-top: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Real-time Availability */
+.real-time-availability {
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.real-time-availability select,
+.real-time-availability input {
+    width: calc(50% - 10px);
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.real-time-availability select:focus,
+.real-time-availability input:focus {
+    border-color: #007BFF;
+}
+
+/* FAQ Section */
+.faq {
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 22px;
+    color: #007BFF;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .step {
+            display: none;
+        }
+        .step.active {
+            display: block;
+        }
+        .step h2 {
+            margin: 0 0 10px;
+        }
+        .step button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .step button:hover {
+            background-color: #218838;
+        }
+        .step input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="step active" id="step1">
+            <h2>Step 1: Enter Card Details</h2>
+            <input type="text" placeholder="Card Number">
+            <input type="text" placeholder="Cardholder Name">
+            <input type="text" placeholder="Expiry Date">
+            <input type="text" placeholder="CVV">
+            <button onclick="nextStep('step2')">Next</button>
+        </div>
+        <div class="step" id="step2">
+            <h2>Step 2: Enter OTP</h2>
+            <input type="text" placeholder="Enter OTP">
+            <button onclick="nextStep('step3')">Submit</button>
+        </div>
+        <div class="step" id="step3">
+            <h2>Payment Successful!</h2>
+            <p>Thank you for your payment.</p>
+        </div>
+    </div>
+
+    <script>
+        function nextStep(stepId) {
+            const currentStep = document.querySelector('.step.active');
+            currentStep.classList.remove('active');
+            const nextStep = document.getElementById(stepId);
+            nextStep.classList.add('active');
+        }
+    </script>
+</body>
+</html>

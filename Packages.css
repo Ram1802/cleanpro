@@ -1,0 +1,43 @@
+.package-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.package-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.package {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.package h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.package ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.package ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.package button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 5px;
+}
