@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CleanPro Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+  /* General body styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background: url('../hcs/images/index.webp') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center; /* Center navbar content */
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width calculation */
+  z-index: 1000;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #f39c12;
+  border-radius: 5px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  z-index: 1000;
+}
+
+.dropdown li {
+  padding: 10px;
+}
+
+.dropdown a {
+  color: #fff;
+  display: block;
+}
+
+.nav-links li:hover .dropdown {
+  display: block;
+}
+
+/* User Menu and Account Icon styles */
+.user-menu a,
+#accountIcon a {
+  color: #fff;
+}
+
+#accountIcon {
+  font-size: 1.5rem;
+}
+
+.nav-cart {
+  position: relative;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+}
+
+.cart-count {
+  background: #f39c12;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 0.8rem;
+}
+
+/* Container styles */
+.container {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 50px auto;
+  max-width: 600px;
+}
+
+.container h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.container p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+/* Footer styles */
+.footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto; /* Push footer to the bottom */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.footer a {
+  color: #f39c12;
+  text-decoration: none;
+  transition: text-decoration 0.3s;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin: 0;
+}
+
+
+
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.php">CleanPro Services</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="about.php">About</a></li>
+    <?php if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true): ?>
+      <li class="user-menu" id="userMenu">
+        <a href="#" id="userName">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></a>
+        <ul class="dropdown">
+          <li><a href="my-profile.php">My Profile</a></li>
+          <li><a href="logout.php">Logout</a></li>
+        </ul>
+      </li>
+      <li id="accountIcon">
+        <a href="my-profile.php">
+          <span id="accountName">👤 Account</span>
+        </a>
+      </li>
+      <li class="nav-cart" id="cart">
+        <a href="cart.php">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-count">0</span>
+        </a>
+      </li>
+    <?php else: ?>
+      <li id="signupMenu">
+        <a href="#">Signup</a>
+        <ul class="dropdown">
+          <li><a href="login.php">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </li>
+    <?php endif; ?>
+  </ul>
+</nav>
+
+
+  <div class="container">
+    <h1>Welcome to CleanPro Services</h1>
+    <p>Your trusted partner for a clean and fresh home.</p>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2024 CleanPro Services. All rights reserved.</p>
+    <p><a href="privacy.php">Privacy Policy</a> | <a href="terms.php">Terms of Service</a></p>
+  </footer>
+</body>
+</html>
